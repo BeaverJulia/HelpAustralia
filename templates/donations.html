@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Thank You</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+
+    <!-- ElegantFonts CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/elegant-fonts.css') }}">
+
+    <!-- themify-icons CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/themify-icons.css') }}">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper.min.css') }}">
+
+    <!-- Styles -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="single-page single-cause">
+    <header class="site-header">
+        <div class="top-header-bar">
+            <div class="container">
+                <div class="row flex-wrap justify-content-center justify-content-lg-between align-items-lg-center">
+                    <div class="col-12 col-lg-8 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
+                        <div class="header-bar-email">
+                            MAIL: <a href="#">helpAustralia@HelpAustralia</a>
+                        </div><!-- .header-bar-email -->
+
+                        <div class="header-bar-text">
+                            <p>PHONE: <span>+00 000 000</span></p>
+                        </div><!-- .header-bar-text -->
+                    </div><!-- .col -->
+
+                    <div class="col-12 col-lg-4 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+                        <div class="donate-btn">
+                            <a href="/donate">Donate Now</a>
+                        </div><!-- .donate-btn -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .top-header-bar -->
+
+        <div class="nav-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="site-branding d-flex align-items-center">
+                            <a class="d-block" href="/" rel="home"><img class="d-block" src="{{ url_for('static', filename='images/logo.png') }}" alt="logo"></a>
+                        </div><!-- .site-branding -->
+
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .nav-bar -->
+    </header><!-- .site-header -->
+
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Thank You <br>
+					Now we are closer to our goal</h1>
+					<center><img src="{{ url_for('static', filename='images/donation-white.png') }}"> <img src="{{ url_for('static', filename='images/dove.png') }}"><br></center>
+					 <div class="col-12 col-lg-7 order-2 order-lg-1">
+					 <div class="fund-raised w-100 mt-5">
+                        <div class="featured-fund-raised-bar barfiller">
+                            <div class="tipWrap">
+                                <span class="tip"></span>
+                            </div><!-- .tipWrap -->
+
+                            <span class="fill" data-percentage="{{p}}"></span>
+                        </div><!-- .fund-raised-bar -->
+
+                        <div class="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
+                            <div class="fund-raised-total mt-4">
+                                Raised: {{ allamount }}
+                            </div><!-- .fund-raised-total -->
+
+                            <div class="fund-raised-goal mt-4">
+                                Goal: $70 000<br>
+
+
+                            </div><!-- .fund-raised-goal -->
+                        </div><!-- .fund-raised-details -->
+                    </div><!-- .fund-raised -->
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .page-header -->
+
+    <div class="highlighted-cause">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-7 order-2 order-lg-1">
+
+                    <div class="entry-content mt-5">
+<div id="tab_2" class="tab-content">
+      {% for user in all %}
+    <li>{{ user.name}}, {{ user.email}}, {{ user.country}}</li>
+    {% endfor %}<br><br>
+</div>
+                        <p> This is not a real donation page, but this is how much I've stored in my MongoDb.  If You really care go to <a href="https://www.wwf.org.au/get-involved/bushfire-emergency" target=_blank><b>WWF donation page</b></a> and donate for this little cute animals.</p>
+                    </div><!-- .entry-content -->
+                    </div><!-- .fund-raised -->
+                </div><!-- .col -->
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .highlighted-cause -->
+
+        <div class="footer-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						This is not a real donation Page. It was made only for university project. Julia Gula<br>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    </div><!-- .col-12 -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .footer-bar -->
+    </footer><!-- .site-footer -->
+
+   <script type='text/javascript' src="{{ url_for('static', filename='js/jquery.js') }}" ></script>
+    <script type='text/javascript' src="{{ url_for('static', filename='js/jquery.collapsible.min.js') }}" ></script>
+    <script type='text/javascript' src="{{ url_for('static', filename='js/swiper.min.js') }}" ></script>
+    <script type='text/javascript' src="{{ url_for('static', filename='js/swiper.js') }}" ></script>
+    <script type='text/javascript' src="{{ url_for('static', filename='js/circle-progress.min.js') }}" ></script>
+    <script type='text/javascript' src="{{ url_for('static', filename='js/jquery.countTo.min.js') }}" ></script>
+    <script type='text/javascript' src="{{ url_for('static', filename='js/jquery.barfiller.js') }}" ></script>
+    <script type='text/javascript' src="{{ url_for('static', filename='js/custom.js') }}" ></script>
+
+</body>
+</html>

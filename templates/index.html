@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HelpAustralia</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+
+    <!-- ElegantFonts CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/elegant-fonts.css') }}">
+
+    <!-- themify-icons CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/themify-icons.css') }}">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper.min.css') }}">
+
+    <!-- Styles -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="site-header">
+        <div class="top-header-bar">
+            <div class="container">
+                  <div class="row flex-wrap justify-content-center justify-content-lg-between align-items-lg-center">
+                    <div class="col-12 col-lg-8 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
+                        <div class="header-bar-email">
+                            MAIL: <a href="#">helpAustralia@HelpAustralia</a>
+                        </div><!-- .header-bar-email -->
+
+                        <div class="header-bar-text">
+                            <p>PHONE: <span>+00 000 000</span></p>
+                        </div><!-- .header-bar-text -->
+                    </div><!-- .col -->
+
+                    <div class="col-12 col-lg-4 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+                        <div class="donate-btn">
+                            <a href="/donate">Donate Now</a>
+                        </div><!-- .donate-btn -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .top-header-bar -->
+
+        <div class="nav-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="site-branding d-flex align-items-center">
+                           <a class="d-block" href="index.html" rel="home"><img class="d-block" src= "{{ url_for('static', filename='images/logo.png') }}" alt="logo"></a>
+                        </div><!-- .site-branding -->
+
+                        <nav class="site-navigation d-flex justify-content-end align-items-center">
+                            <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
+                                <li class="current-menu-item"><a href="/">Home</a></li>
+                               
+                            </ul>
+                        </nav><!-- .site-navigation -->
+
+                        <div class="hamburger-menu d-lg-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div><!-- .hamburger-menu -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .nav-bar -->
+    </header><!-- .site-header -->
+
+    <div class="swiper-container hero-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide hero-content-wrap">
+                <img src="{{ url_for('static', filename='images/hero.jpg') }}" alt="">
+
+                <div class="hero-content-overlay position-absolute w-100 h-100">
+                    <div class="container h-100">
+                        <div class="row h-100">
+                            <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-start">
+                                <header class="entry-header">
+                                    <h1>Donate</h1>
+                                    <h4>4 a better world</h4>
+                                </header><!-- .entry-header -->
+
+                                <div class="entry-content mt-4">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus ullamcorper</p>
+                                </div><!-- .entry-content -->
+
+                                <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
+                                    <a href="/donate" class="btn gradient-bg mr-2">Donate Now</a>
+                                    <a href="https://www.wwf.org.au/get-involved/bushfire-emergency" class="btn orange-border">Read More</a>
+                                </footer><!-- .entry-footer -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .container -->
+                </div><!-- .hero-content-overlay -->
+            </div><!-- .hero-content-wrap -->
+
+            <div class="swiper-slide hero-content-wrap">
+                <img src="{{ url_for('static', filename='images/hero2.jpg') }}"  alt="">
+
+                <div class="hero-content-overlay position-absolute w-100 h-100">
+                    <div class="container h-100">
+                        <div class="row h-100">
+                            <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-start">
+                                <header class="entry-header">
+                                    <h1>Help </h1>
+                                    <h4>Australia</h4>
+                                </header><!-- .entry-header -->
+
+                                <div class="entry-content mt-4">
+                                    <p>The devastating wildfires that are currently ravaging through Australia have left experts fearing that an estimated half-billion animals are dead.</p>
+                                </div><!-- .entry-content -->
+
+                                <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
+                                    <a href="/donate" class="btn gradient-bg mr-2">Donate Now</a>
+                                    <a href="https://www.wwf.org.au/get-involved/bushfire-emergency" class="btn orange-border">Read More</a>
+                                </footer><!-- .entry-footer -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .container -->
+                </div><!-- .hero-content-overlay -->
+            </div><!-- .hero-content-wrap -->
+
+            <div class="swiper-slide hero-content-wrap">
+                <img src="{{ url_for('static', filename='images/hero3.jpg') }}"  alt="">
+
+                <div class="hero-content-overlay position-absolute w-100 h-100">
+                    <div class="container h-100">
+                        <div class="row h-100">
+                            <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-start">
+                                <header class="entry-header">
+                                    <h1>Help</h1>
+                                    <h4>Australia</h4>
+                                </header><!-- .entry-header -->
+
+                                <div class="entry-content mt-4">
+                                    <p>The devastating wildfires that are currently ravaging through Australia have left experts fearing that an estimated half-billion animals are dead.</p>
+                                </div><!-- .entry-content -->
+
+                                <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
+                                    <a href="/donate" class="btn gradient-bg mr-2">Donate Now</a>
+                                    <a href="https://www.wwf.org.au/get-involved/bushfire-emergency" class="btn orange-border">Read More</a>
+                                </footer><!-- .entry-footer -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .container -->
+                </div><!-- .hero-content-overlay -->
+            </div><!-- .hero-content-wrap -->
+        </div><!-- .swiper-wrapper -->
+
+        <div class="pagination-wrap position-absolute w-100">
+            <div class="container">
+                <div class="swiper-pagination"></div>
+            </div><!-- .container -->
+        </div><!-- .pagination-wrap -->
+
+        <!-- Add Arrows -->
+        <div class="swiper-button-next flex justify-content-center align-items-center">
+            <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1171 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"/></svg></span>
+        </div>
+
+        <div class="swiper-button-prev flex justify-content-center align-items-center">
+            <span><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1203 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg></span>
+        </div>
+    </div><!-- .hero-slider -->
+
+        <div class="footer-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						This is not a real donation Page. It was made only for university project. Julia Gula<br>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> 
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    </div><!-- .col-12 -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .footer-bar -->
+    </footer><!-- .site-footer -->
+
+    <script type='text/javascript' src="{{ url_for('static', filename='js/jquery.js') }}" ></script>
+    <script type='text/javascript' src="{{ url_for('static', filename='js/jquery.collapsible.min.js') }}" ></script>
+    <script type='text/javascript' src="{{ url_for('static', filename='js/swiper.min.js') }}" ></script>
+    <script type='text/javascript' src="{{ url_for('static', filename='js/swiper.js') }}" ></script>
+    <script type='text/javascript' src="{{ url_for('static', filename='js/circle-progress.min.js') }}" ></script>
+    <script type='text/javascript' src="{{ url_for('static', filename='js/jquery.countTo.min.js') }}" ></script>
+    <script type='text/javascript' src="{{ url_for('static', filename='js/jquery.barfiller.js') }}" ></script>
+    <script type='text/javascript' src="{{ url_for('static', filename='js/custom.js') }}" ></script>
+
+</body>
+</html>
