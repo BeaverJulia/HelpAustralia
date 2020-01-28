@@ -27,10 +27,21 @@ def GetAll():
     allDonations = donations.find()
     return (allDonations)
 
+def HowMuchWeHave():
+    allTogether=0
+    allTogether=percent()
+    p=0
+    p = int(allTogether * 100 / goal)
+    if p>100:
+        return 100
+    else:
+        return p
+
 @app.route("/donate", methods=["GET", "POST"])
 def Donate():
     allamount=percent()
     all=GetAll()
+    howMuch=HowMuchWeHave()
     if request.method == "POST":
         Name = request.form.get("name")
         Amount = request.form.get("Amount")
@@ -38,15 +49,16 @@ def Donate():
         Country = request.form.get("country")
         date = str(datetime.today())
         donations.insert_one({"name": Name, "amount": Amount, "date": date, "email": Email, "country": Country})
-        return render_template("donations.html", allamount=allamount, p=int(allamount*100/goal), all=all)
+        return render_template("donations.html", allamount=allamount, p=howMuch, all=all)
     else:
-        return render_template("single-causes.html", allamount=allamount, p=int(allamount*100/goal))
+        return render_template("single-causes.html", allamount=allamount, p=howMuch)
 
 @app.route("/alldonations",  methods=["GET"])
 def allDonations():
     allamount = percent()
     all = GetAll()
-    return render_template("donations.html", allamount=allamount, p=int(allamount * 100 / goal), all=all)
+    howMuch = HowMuchWeHave()
+    return render_template("donations.html", allamount=allamount, p=howMuch, all=all)
 
 
 

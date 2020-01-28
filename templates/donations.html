@@ -104,6 +104,9 @@
                 <div class="col-12 col-lg-7 order-2 order-lg-1">
 
                     <div class="entry-content mt-5">
+                         {% if p== 100 %}
+                         <p>We have reached our goal! Thank You!</p>
+                {%  endif %}
 <div id="tab_2" class="tab-content">
       {% for user in all %}
     <li>{{ user.name}}, {{ user.email}}, {{ user.country}}</li>

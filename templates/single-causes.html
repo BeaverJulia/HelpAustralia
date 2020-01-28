@@ -105,7 +105,7 @@
 
                         <div class="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
                             <div class="fund-raised-total mt-4">
-                                Raised: ${{ allamount }}
+                                Raised: $${{ allamount }}
                             </div><!-- .fund-raised-total -->
 
                             <div class="fund-raised-goal mt-4">
@@ -116,7 +116,9 @@
                 </div><!-- .col -->
 
                 <div class="col-12 col-lg-5 order-1 order-lg-2">
-                    <img src="images/oshomah.jpg" alt="">
+                    {% if {{p}} == 100%}
+                         <p>We have reached our goal! Thank You!</p>
+                {%  endif %}
                 </div><!-- .col -->
             </div><!-- .row -->
         </div><!-- .container -->
