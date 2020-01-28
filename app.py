@@ -27,9 +27,9 @@ def GetAll():
     allDonations = donations.find()
     return (allDonations)
 
-def HowMuchWeHave():
-    allTogether=0
-    allTogether=percent()
+def HowMuchWeHave(howmuchwehave):
+
+    allTogether=howmuchwehave
     p=0
     p = int(allTogether * 100 / goal)
     if p>100:
@@ -41,7 +41,7 @@ def HowMuchWeHave():
 def Donate():
     allamount=percent()
     all=GetAll()
-    howMuch=HowMuchWeHave()
+    howMuch=HowMuchWeHave(allamount)
     if request.method == "POST":
         Name = request.form.get("name")
         Amount = request.form.get("Amount")
@@ -49,6 +49,8 @@ def Donate():
         Country = request.form.get("country")
         date = str(datetime.today())
         donations.insert_one({"name": Name, "amount": Amount, "date": date, "email": Email, "country": Country})
+        allamount = percent()
+        howMuch = HowMuchWeHave(allamount)
         return render_template("donations.html", allamount=allamount, p=howMuch, all=all)
     else:
         return render_template("single-causes.html", allamount=allamount, p=howMuch)
@@ -57,7 +59,7 @@ def Donate():
 def allDonations():
     allamount = percent()
     all = GetAll()
-    howMuch = HowMuchWeHave()
+    howMuch = HowMuchWeHave(allamount)
     return render_template("donations.html", allamount=allamount, p=howMuch, all=all)
 
 
